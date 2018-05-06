@@ -309,6 +309,10 @@ textarea {
 
 /* ************| Serviços |************ */
 
+.serviços{
+    padding: 10px;
+}
+
 .titulo{
     text-align: center;
 }
@@ -327,11 +331,12 @@ textarea {
 #servicos{
     margin-top: 20px;
     text-align: center;
+
 }
 
 .col{
     background-color: rgba(51,51,51,1);
-    padding: 10px;
+    padding: 12px;
     margin: 5px;
 }
 
@@ -384,6 +389,13 @@ textarea {
 #btnEnviar {
     margin-top: 10px;
 }
+
+.social i{
+    color: #ff6600;
+    margin: 5px;
+}
+
+
 
 
 /* ************| Social |************ */

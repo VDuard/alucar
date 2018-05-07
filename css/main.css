@@ -349,6 +349,26 @@ textarea {
 }
 /* ************| Serviços |************ */
 
+/* ************| Serviços NOVO |************ */
+
+#servNov .jumbotron{
+    margin-top: 15px;
+}
+
+#servNov h2{
+    margin-top: 10px;
+    font-size: 30pt;
+    color: #333333;
+}
+
+#servNov h3{
+    font-size: 20pt;
+    color: #333333;
+}
+
+
+/* ************| Serviços NOVO |************ */
+
 /* ************| Social |************ */
 
 #social{
@@ -360,6 +380,7 @@ textarea {
 #social h3{
     font-family: "Bebas Neue";
     color: #ff6600;
+    font-size: 35px;
 }
 
 #social h5{

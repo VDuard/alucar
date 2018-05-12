@@ -1,0 +1,50 @@
+/* ************| GERAL |************ */
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: local('font/BebasNeue.otf');
+}
+
+@font-face {
+    font-family: Calibri;
+    src: local('font/calibri.ttf');
+}
+
+/* ************| GERAL |************ */
+
+/* ************| NavBar |************ */
+
+
+
+/* ************| NavBar |************ */
+
+/* ************| BODY |************ */
+
+body{
+    margin-top: 100px;
+}
+
+/* ************| BODY |************ */
+
+/* ************| corpo |************ */
+
+#corpo{
+    margin-top: 76px;
+}
+
+#bannerTit{
+    border-image:url("../img/cadastro/banner_top.png") 100 round;
+}
+
+#corpo h2{
+    font-family: "Bebas Neue";
+    font-size: 40pt;
+    color: #ff6600;
+    margin-top: 10px;
+}
+
+#corpo form label{
+    margin-top: 8px;
+}
+
+/* ************| corpo |************ */

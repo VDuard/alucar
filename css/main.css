@@ -283,8 +283,18 @@ textarea {
     src: local('font/BebasNeue.otf');
 }
 
+@font-face {
+    font-family: Calibri;
+    src: local('font/calibri.ttf');
+}
+
 /* ************| NavBar |************ */
 
+#navBar .cadastrar{
+    font-family: "Calibri";
+    font-size: 10pt;
+    color: #333333;
+}
 
 /* ************| NavBar |************ */
 

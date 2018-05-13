@@ -48,3 +48,30 @@ body{
 }
 
 /* ************| corpo |************ */
+
+/* ************| rodape |************ */
+
+#rodape{
+    background-color: #333333;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+#rodape h3{
+    font-family: "Bebas Neue";
+    font-size: 30pt;
+    color: #ff6600;
+}
+
+#rodape i{
+    margin: 5px;
+    color: white;
+}
+
+#rodape a :hover{
+    color: #ff6600;
+    transition: 5ms;
+}
+
+/* ************| rodape |************ */
+

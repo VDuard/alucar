@@ -4,7 +4,6 @@ function Teste()
 {
 	
 }
-
 function RealizarAluguel()
 {
 

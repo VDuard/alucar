@@ -1,38 +1,33 @@
-var nome;
-var endereco;
-var cep;
-var telefone;
-var celular;
-var cpf;
-var nomeUsuario;
-var senha;
-var email;
-var dataNasc;
-var idCidade;
-var nomeCidade;
-var ufCidade;
-var siglaPais;
-var nomePais;
-
 class Usuario{
 
+	constructor ()
+	{
+		this.nome;
+		this.endereco1;
+		this.endereco2;
+		this.cep; 
+		this.telefone;
+		this.celular;
+		this.tipoPessoa;
+		this.cpf;
+		this.cnh;
+		this.dataNasc;
+		this.pais;
+		this.cidadeUf;
+		this.cidade;
+		this.email;
+		this.nomeUsuario;
+		this.senha;
+
+		this.mensagemAlerta;
+
+	}
+	
+
 }
 
-function alerta()
-{
-	alert('teste');
-}
 
 
-var Cliente = {
-	Cadastrar : function ()
-	{
-		//codigo para cadastro do cliente
-	}
-};
-var Funcionario = {
-	Cadastrar : function ()
-	{
-		//codigo para cadastro do cliente
-	}
-};
+
+
+

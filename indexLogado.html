@@ -33,7 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="indexLogado.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alugar.html">Alugar</a>
                     </li>
 
                     <li class="nav-item">
@@ -42,12 +45,18 @@
 
                 </ul>
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Email">
-                        <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pessoa Logada
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
+                            <a class="dropdown-item" href="#">Meus Alugueis</a>
+                          </div>
+                        </div>
                         <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                            <a href="indexLogado.html" style="color:inherit"> LogIn </a>
+                            <a href="index.html" style="color:inherit"> Sair </a>
                         </button>
-                        <button class="btn btn-dark my-2 my-sm-0" type="submit">SignIn</button>
                     </form>
             </div>
         </nav>

@@ -18,39 +18,199 @@
 
 
 <!-- NavBar -->
+<div class = "container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navBar" style="background-color: #ff6600;">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logoNav" height="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navBar" style="background-color: #ff6600;">
-    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logoNav" height="50px"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="indexLogado.html">Home</a>
+                </li>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Alugar <span class="sr-only">(current)</span></a>
+                </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Alugar <span class="sr-only">(current)</span></a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastre-se</a>
-            </li>
-
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Email">
-            <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha">
-            <button class="btn btn-dark my-2 my-sm-0" type="submit">Login</button>
-        </form>
-    </div>
-</nav>
+            </ul>
+                    <form class="form-inline">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pessoa Logada
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
+                            <a class="dropdown-item" href="#">Meus Alugueis</a>
+                          </div>
+                        </div>
+                        <button class="btn btn-dark my-2 my-sm-0" type="submit">
+                            <a href="index.html" style="color:inherit"> Sair </a>
+                        </button>
+                    </form>
+        </div>
+    </nav>
+</div>
     <!-- /NavBar -->
 
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Alucar
+                </h2>
+                <p>
+                    Trazendo os melhores carros pra você!
+                </p>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Carros" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail First" src="img/carros/carro1.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
 
+                            <p class="card-text">
+                                Proteção parcial contra danos, conforto e motorista!
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 75,50
+                            </h5>
+                            <p>
+                                <a class="btn btn-primary" href="realizarAluguel.html">Alugar!</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="img/carros/carro2.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
+                            <p class="card-text">
+                                Proteção parcial contra danos.
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 50,50
+                            </h5>
+
+                            <p>
+                                <a class="btn btn-primary" href="#">Alugar!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="img/carros/carro3.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
+                            <p class="card-text">
+                                Proteção parcial contra danos.
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 50,50
+                            </h5>
+
+                            <p>
+                                <a class="btn btn-primary" href="#">Alugar!</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail First" src="img/carros/carro4.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
+                            <p class="card-text">
+                                Proteção parcial contra danos.
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 50,50
+                            </h5>
+
+                            <p>
+                                <a class="btn btn-primary" href="#">Alugar!</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="img/carros/carro5.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
+                            <p class="card-text">
+                                Proteção parcial contra danos.
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 50,50
+                            </h5>
+
+                            <p>
+                                <a class="btn btn-primary" href="#">Alugar!</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="img/carros/carro6.jpg" />
+                        <div class="card-block">
+                            <h5 class="card-title">
+                                Nome do carro
+                            </h5>
+                            <p class="card-text">
+                                Proteção parcial contra danos.
+                            </p>
+                            <h6>Preço por dia.</h6>
+                            <h5 class="card-title">
+                                R$ 50,50
+                            </h5>
+                            <p>
+                                <a class="btn btn-primary" href="#">Alugar!</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

@@ -47,7 +47,7 @@
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
-                            <a class="dropdown-item" href="aluguelAtual.html">Meus Alugueis</a>
+                            <a class="dropdown-item" href="#">Meus Alugueis</a>
                           </div>
                         </div>
                         <button class="btn btn-dark my-2 my-sm-0" type="submit">
@@ -65,13 +65,14 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h2>
-                            Aluguel de veiculos
+                            Carro Selecionado
                         </h2>
                         <p>
                             Trazendo os melhores carros pra você!
                         </p>
                     </div>
                     <div class="col-md-4">
+                        <img src="img/carros/carro1.jpg" class="img-fluid" alt="Responsive image">
                     </div>
                 </div>
             </div>
@@ -80,43 +81,112 @@
 
 </div>
 
-<div class="container">
-    <div class="jumbotron">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="img/carros/carrolarge.jpg" class="img-fluid" alt="Responsive image">
+    <!-- Aluguel -->
+    <div class="container" id="corpo">
+        <img src="img/cadastro/banner_top.png" alt="bannertop" class="img-fluid" id="bannerTit">
+        <h2>Aluguel</h2>
+        <hr color="#ff6600">
 
-                </div>
-                <div class="col-md-8">
-                    <h1>Nome do carro</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, expedita amet dolorem a libero soluta quasi quae suscipit possimus, sed quo qui modi esse repudiandae quos magni, labore molestiae accusamus.</p>
-                    <p><h1>4.6  </h1></p>
-                    <p>
-                        <h6>Motorista?</h6>
-                        <select class="custom-select">
-                          <option value="1">sim</option>
-                          <option value="2">não</option>
-                        </select>
-                        <h6>Selecione seu motorista</h6>
-                        <select class="custom-select">
-                          <option selected>Motorista 1 (2.5)</option>
-                          <option value="1">Motorista 2 (1.5)</option>
-                          <option value="2">Motorista 3 (4.5)</option>
-                          <option value="3">Motorista 4 (5.0)</option>
-                        </select>                        
-                        <button type="button " class="btn btn-primary mt-2">
-                            <a href="#" style="color:inherit">alugar</a>
-                        </button>
+        <form>
 
-                    </p>
-                </div>
+            <div class="form-group">
+                
+                <label for="name">Nome Completo *</label>
+                <input type="name" class="form-control" id="name" placeholder="Nome">
+
+
+                <label for="endereco1">Endereço *</label>
+                <input type="name" class="form-control" id="endereco1" placeholder="Nome">
+                <small id="endereco1Help" class="form-text text-muted">Linha 1.</small>
+
+                <label for="endereco2">Endereço Cont.</label>
+                <input type="name" class="form-control" id="endereco2" placeholder="Nome">
+                <small id="endereco2Help" class="form-text text-muted">Linha 2.</small>
+
+                <label for="cep">CEP *</label>
+                <input type="number" class="form-control" id="cep" placeholder="CEP" maxlength="11">
+                <small id="cepjHelp" class="form-text text-muted">Atpenas números.</small>
+
+                <label for="tel">Telefone *</label>
+                <input type="tel" class="form-control" id="tel" placeholder="DDD mais números">
+                <small id="telHelp" class="form-text text-muted">Atpenas números.</small>
+
+                <label for="cel">Celular </label>
+                <input type="cel" class="form-control" id="cel" placeholder="DDD mais números">
+                <small id="celHelp" class="form-text text-muted">Atpenas números.</small>
+
+                <label for="tipoSelect">Tipo de pessoa</label>
+                    <select class="form-control" id="tipoSelect">
+                      <option>J</option>
+                      <option>F</option>
+                    </select>
+
+                <label for="cpf/cnpj">CPF/CNPJ *</label>
+                <input type="number" class="form-control" id="cpf/cnpj" placeholder="CPF/CNPJ" maxlength="11">
+                <small id="cpf/cnpjHelp" class="form-text text-muted">Atpenas números.</small>
+
+
+                <label for="cnh">CNH</label>
+                <input type="text" class="form-control" id="cnh" placeholder="CNH">
+                <small id="cnhHelp" class="form-text text-muted">Apenas números.</small>
+
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" class="form-control" id="nascimento" placeholder="Data de Nascimento">
+
+                <label for="pais">País</label>
+                    <select class="form-control" id="pais">
+                      <option>USA</option>
+                      <option>Brasil</option>
+                      <option>Rússia</option>
+                    </select>
+
+                <label for="estado">Estado</label>
+                    <select class="form-control" id="estado">
+                      <option>São Paulo</option>
+                      <option>Rio de Janeiro</option>
+                      <option>Paraíba</option>
+                    </select>
+
+                <label for="cidade">Cidade</label>
+                    <select class="form-control" id="cidade">
+                      <option>Água Branca</option>
+                      <option>Aguiar</option>
+                      <option>Joao Pessoa</option>
+                    </select>
+
+
+
+
             </div>
-        </div>
+            <div class="form-group">
+
+                <label for="email">Email *</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailhelp" placeholder="Email">
+                <small id="emailhelp" class="form-text text-muted">Nós nunca vamos compartilhar seu e-mail com mais ninguém.</small>
+
+                <label for="username">Usuário *</label>
+                <input type="username" class="form-control" id="username" placeholder="Usuário" maxlength="30">
+                <small id="usernameHelp" class="form-text text-muted">Até 30 caracteres.</small>
+
+                <label for="senha">Senha *</label>
+                <input type="password" class="form-control" id="senha" aria-describedby="senha" placeholder="Senha" maxlength="8">
+                <small id="senhaHelp" class="form-text text-muted">Até 8 caracteres.</small>
+
+            </div>
+
+            <div class="from-group">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label" for="check1">Aceito os <a href="#">termos e condições</a></label>
+                 </div>
+                <button type="submit" class="btn btn-dark" style="background-color: #ff6600" id = "submitBut">Submit</button>
+            </div>
+
+        </form>
+
     </div>
-    </div>
-</div>
+    <!-- /Cadastro -->
+
 
 
 

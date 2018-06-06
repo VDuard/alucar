@@ -32,7 +32,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="#">Alugar <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="alugar.html"> Alugar <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
@@ -105,7 +105,22 @@
                           <option value="1">Motorista 2 (1.5)</option>
                           <option value="2">Motorista 3 (4.5)</option>
                           <option value="3">Motorista 4 (5.0)</option>
-                        </select>                        
+                        </select> 
+                        <h6>Periodo de Locacao</h6>
+                        <select class="custom-select">
+                          <option selected>5 dias</option>
+                          <option value="1">10 dias</option>
+                          <option value="2">15 dias</option>
+                          <option value="3">outro</option>
+                        </select> 
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1"><h6>Quantidade de dias</h6></label>
+                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex.: 60">
+                            <small id="emailHelp" class="form-text text-muted">Use esse campo apenas se voce selecionou outro.</small>
+                          </div>
+                        </form>                       
+                       
                         <button type="button " class="btn btn-dark mt-2" style="background-color: #ff6600;">
                             <a href="#" style="color:inherit">alugar</a>
                         </button>

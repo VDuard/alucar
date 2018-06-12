@@ -1,3 +1,69 @@
+<?php
+session_start();
+require_once 'php/config/config.php';
+
+$usuario = $senha = "";
+$usuario_err = $senha_err = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    $input_usuario = trim($_POST["usuario"]);
+    if (empty($input_usuario)){
+        $usuario_err = 'Por favor insira um nome de usuario';
+    } else {
+        $usuario = $input_usuario;
+    }
+
+    $input_senha = trim($_POST["senha"]);
+    if (empty($input_senha)){
+        $senha_err = 'Por favor insira uma senha';
+    } else {
+        $senha = md5($input_senha);
+    }
+
+    if (empty($usuario_err)){
+        $sql = "SELECT * FROM usuario WHERE usuario = ?";
+
+        //$result = mysql_query($sql);
+        //$rs = mysql_fetch_array($result);
+        //$select_idUsuario = $rs['idUsuario'];
+
+        if ($stmt = $mysqli->prepare($sql)){
+            
+            $stmt->bind_param("s", $param_usuario);
+
+            $param_usuario = $usuario;
+            $param_senha = $senha;
+
+            if ($stmt->execute()){
+                $stmt->store_result();
+                $result = $stmt->num_rows;
+                if ($result == 0){
+                    echo "<script language='JavaScript' type='text/javascript'>
+                            alert('Usuário não cadastrado ou Usuário e Senha incorretos.');
+                            window.location.href='index.php';
+                      </script>";
+                    die();
+                } else {
+                    $_SESSION['usuarioUserName']=$param_usuario;
+                    header("location: view/indexLogado.php");
+                    exit();
+                }
+
+            } else {
+                echo "<script language='JavaScript' type='text/javascript'>
+                            alert('Algo deu errado. Por favor, tente novamente mais tarde.');
+                            window.location.href='index.php';
+                      </script>";
+                die();
+            }
+        }
+        $stmt->close();
+    }
+    $mysqli->close();
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="pt-br">
     <head>
@@ -37,15 +103,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="view/cadastro.html">Cadastre-se</a>
+                        <a class="nav-link" href="view/cadastro.php">Cadastre-se</a>
                     </li>
 
                 </ul>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Email">
-                        <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha">
-                        <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                            <a href="view/indexLogado.html" style="color:inherit"> LogIn </a>
+                    <form class="form-inline" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Email" name="usuario">
+                        <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha" name="senha">
+                        <button class="btn btn-dark my-2 my-sm-0 mr-1" type="submit">
+                            <a style="color:inherit"> LogIn </a>
                         </button>
                         <button class="btn btn-dark my-2 my-sm-0" type="submit">SignIn</button>
                     </form>

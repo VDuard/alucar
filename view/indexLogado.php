@@ -1,3 +1,33 @@
+
+<?php
+session_start();
+include_once '../php/config/config.php';
+
+global $select_idUsuario;
+$usuarioUserName=$_SESSION['usuarioUserName'];
+
+$sql = "SELECT * FROM usuario";
+if ($result = $mysqli->query($sql)){
+    if($result->num_rows > 0){
+        while ($row = $result->fetch_array()) {
+            if($row['usuario'] == $usuarioUserName){
+
+                $select_idUsuario = $row['idUsuario'];
+                $usuario_nome = $row['nome'];
+                
+            }
+        }   
+    }
+}
+
+$_SESSION['idUsuario']=$select_idUsuario;
+$_SESSION['usarioNome']=$usuario_nome;
+
+
+$mysqli->close();
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="pt-br">
     <head>
@@ -33,29 +63,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="indexLogado.html">Home</a>
+                        <a class="nav-link" href="indexLogado.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="alugar.html">Alugar</a>
+                        <a class="nav-link" href="alugar.php">Alugar</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastre-se</a>
-                    </li>
 
                 </ul>
                     <form class="form-inline">
                         <div class="dropdown">
                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pessoa Logada
+                            <?php
+                            echo $usuario_nome;
+                            ?>
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
-                            <a class="dropdown-item" href="aluguelAtual.html">Meus Alugueis</a>
+                            <a class="dropdown-item" href="areaGerenciamentoGerente.php">Area de Gerenciamento</a>
+                            <a class="dropdown-item" href="aluguelAtual.php">Meus Alugueis</a>
                           </div>
                         </div>
-                        <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                            <a href="../index.html" style="color:inherit"> Sair </a>
+                        <button class="btn btn-dark my-2 my-sm-0 ml-1" type="submit" >
+                            <a href="../index.php" style="color:inherit"> Sair </a>
                         </button>
                     </form>
             </div>

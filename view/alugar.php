@@ -1,3 +1,11 @@
+<?php
+session_start();
+include_once '../php/config/config.php';
+
+$usuario_nome = $_SESSION['usarioNome'];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +28,7 @@
 <!-- NavBar -->
 <div class = "container">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navBar" style="background-color: #ff6600;">
-        <a class="navbar-brand" href="indexLogado.html"><img src="../img/logo.png" alt="logoNav" height="50px"></a>
+        <a class="navbar-brand" href="indexLogado.php"><img src="../img/logo.png" alt="logoNav" height="50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="indexLogado.html">Home</a>
+                    <a class="nav-link" href="indexLogado.php">Home</a>
                 </li>
 
                 <li class="nav-item active">
@@ -36,22 +44,24 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                    <a class="nav-link" href="cadastro.php">Cadastre-se</a>
                 </li>
 
             </ul>
                     <form class="form-inline">
                         <div class="dropdown">
                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pessoa Logada
+                          <?php
+                            echo $usuario_nome;
+                            ?>
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
-                            <a class="dropdown-item" href="aluguelAtual.html">Meus Alugueis</a>
+                            <a class="dropdown-item" href="areaGerenciamentoGerente.php">Area de Gerenciamento</a>
+                            <a class="dropdown-item" href="aluguelAtual.php">Meus Alugueis</a>
                           </div>
                         </div>
                         <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                            <a href="../index.html" style="color:inherit"> Sair </a>
+                            <a href="../index.php" style="color:inherit"> Sair </a>
                         </button>
                     </form>
         </div>
@@ -85,7 +95,7 @@
                         <img class="card-img-top" alt="Bootstrap Thumbnail First" src="../img/carros/carro1.jpg" />
                         <div class="card-block">
                             <h5 class="card-title">
-                                Nome do carro
+                                Gol | Volkswagen
                             </h5>
 
                             <p class="card-text">
@@ -96,7 +106,7 @@
                                 R$ 75,50
                             </h5>
                             <p>
-                                <a class="btn btn-outline-light" style="background-color:#ff6600;" href="realizarAluguel.html">Alugar!</a> 
+                                <a class="btn btn-outline-light" style="background-color:#ff6600;" href="realizarAluguel.php">Alugar!</a> 
                             </p>
                         </div>
                     </div>
@@ -106,14 +116,14 @@
                         <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="../img/carros/carro2.jpg" />
                         <div class="card-block">
                             <h5 class="card-title">
-                                Nome do carro
+                                Sonic | Chevrolet 
                             </h5>
                             <p class="card-text">
                                 Proteção parcial contra danos.
                             </p>
                             <h6>Preço por dia.</h6>
                             <h5 class="card-title">
-                                R$ 50,50
+                                R$ 69,90
                             </h5>
 
                             <p>
@@ -127,7 +137,7 @@
                         <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="../img/carros/carro3.jpg" />
                         <div class="card-block">
                             <h5 class="card-title">
-                                Nome do carro
+                                Celta | Chevrolet 
                             </h5>
                             <p class="card-text">
                                 Proteção parcial contra danos.
@@ -144,70 +154,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="Bootstrap Thumbnail First" src="../img/carros/carro4.jpg" />
-                        <div class="card-block">
-                            <h5 class="card-title">
-                                Nome do carro
-                            </h5>
-                            <p class="card-text">
-                                Proteção parcial contra danos.
-                            </p>
-                            <h6>Preço por dia.</h6>
-                            <h5 class="card-title">
-                                R$ 50,50
-                            </h5>
-
-                            <p>
-                                <a class="btn btn-outline-light" style="background-color:#ff6600;" href="#">Alugar!</a> 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="../img/carros/carro5.jpg" />
-                        <div class="card-block">
-                            <h5 class="card-title">
-                                Nome do carro
-                            </h5>
-                            <p class="card-text">
-                                Proteção parcial contra danos.
-                            </p>
-                            <h6>Preço por dia.</h6>
-                            <h5 class="card-title">
-                                R$ 50,50
-                            </h5>
-
-                            <p>
-                                <a class="btn btn-outline-light" style="background-color:#ff6600;" href="#">Alugar!</a> 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="../img/carros/carro6.jpg" />
-                        <div class="card-block">
-                            <h5 class="card-title">
-                                Nome do carro
-                            </h5>
-                            <p class="card-text">
-                                Proteção parcial contra danos.
-                            </p>
-                            <h6>Preço por dia.</h6>
-                            <h5 class="card-title">
-                                R$ 50,50
-                            </h5>
-                            <p>
-                                <a class="btn btn-outline-light" style="background-color:#ff6600;" href="#">Alugar!</a> 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>

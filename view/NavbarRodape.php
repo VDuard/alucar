@@ -6,9 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="img/logo.ico">
+    <link rel="icon" href="../img/logo.ico">
 
-    <link rel="stylesheet" href="css/alugar.css">
+    <link rel="stylesheet" href=".//css/alugar.css">
 
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -20,7 +20,7 @@
 <!-- NavBar -->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navBar" style="background-color: #ff6600;">
-    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logoNav" height="50px"></a>
+    <a class="navbar-brand" href="indexLogado.php"><img src="../img/logo.png" alt="logoNav" height="50px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,81 +28,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="indexLogado.html">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="alugar.html"></a>
+                <a class="nav-link" href="#">Alugar <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                <a class="nav-link" href="cadastro.php">Cadastre-se</a>
             </li>
+
         </ul>
-        <form class="form-inline">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pessoa Logada
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="areaGerenciamentoGerente.html">Area de Gerenciamento</a>
-                <a class="dropdown-item" href="aluguelAtual.html">Meus Alugueis</a>
-              </div>
-            </div>
-            <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                <a href="index.html" style="color:inherit"> Sair </a>
-            </button>
-        </form>    
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Usuário" aria-label="Email">
+            <input class="form-control mr-sm-2" type="password" placeholder="Senha" aria-label="Senha">
+            <button class="btn btn-dark my-2 my-sm-0" type="submit">Login</button>
+        </form>
     </div>
 </nav>
     <!-- /NavBar -->
 
 
-<!-- carro alugado -->
-<div class="container mt-5">
-        <div class="row">
-        <div class="col-md-12">
-            <div class="jumbotron">
-                <h2>
-                    Gerenciador de Alugueis
-                </h2>
-                <div class="container">
-                    <ul class="list-group mt-5">
-                      <li class="list-group-item active mt-5">Alugueis ativos</li>
-                      <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    Nome do carro
-                                </div>
-                                <div class="col-md-3">
-                                    <p>id aluguel</p>
-                                    <p>nome cliente</p>
-                                    <p>nome funcionario 1</p>
-                                    <p>nome funcionario 2 </p>
-                                </div>
-                                <div class="col-md-3">
-                                    <p>Data de inicio(03/05/2018)</p>
-                                    <p>Data de devolucao(12/05/2018)</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-danger">Cancelar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      </li>
-                    </ul>
 
-                </div>
 
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- /carro alugado -->
 
 
 <!-- rodapé -->
